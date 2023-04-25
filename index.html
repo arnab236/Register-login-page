@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<link rel="stylesheet" type="text/css" href="arnab.css">
+</head>
+
+
+
+
+
+<body>
+	<!-- ADDING NAVBAR -->
+	<nav>
+		<button class="loginbtn" onclick="document.getElementById('total-form').style.display='block'"style="width:auto;">Login</button>
+	</nav>
+
+
+
+
+<!--      ------MIAN DIVISION BRANCH-------    -->
+	<div id ="total-form">
+		<div class = " form-box"> 
+
+
+			<!-- ---USE TO ADD THE BUTTONS--- -->
+			<div id="container">
+				<button type="button" onclick="login()" class="logins">Login</button>
+				<button type="button" onclick="register()" class="registers">Register</button>
+			</div>
+
+
+			<!--  ---LOGIN FORM BIGINS---  -->
+			<form id="login" class="login-form">
+				<h2>Login</h2>
+				<label for="username">Username</label>
+				<input type="text" id="username" name="username" required>
+				<label for="password">Password</label>
+				<input type="password" id="password" name="password" required>
+				<button type="submit">Login</button>
+				<p class="error-message"></p>
+			</form>
+
+
+			<!--  ---REGISTER FORM BIGINS---  -->
+			<form id="register" class="register-form">
+				<h2>Register</h2>
+				<label for="username">Username</label>
+				<input type="text" id="username" name="username" required>
+				<label for="password">Password</label>
+				<input type="password" id="password" name="password" required>
+				<button type="submit">Register</button>
+				<p class="error-message"></p>
+			</form>
+
+		</div> 
+		
+	</div>
+	
+	<!--To set the box position-->
+	<script>
+		var x = document.getElementById('login');
+		var y = document.getElementById('register');
+		var z = document.getElementById('container');
+
+		function register()
+		{
+			x.style.left = '-400px';
+			y.style.left = '50px';
+			z.style.left = '110px';
+		}
+		function login()
+		{
+			x.style.left = '50px';
+			y.style.left = '450px';
+			z.style.left = '0px';
+		}
+	</script>
+	<!--To add the attribute-->
+	<script>
+		var modal = document.getElementById('total-form');
+		window.onclick = function(event){
+			if(event.target == modal){
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+
+
+
+
+
+
+
+	<script src="scripts.js"></script>
+</body>
+</html>
